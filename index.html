@@ -5,11 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="icon" type="image/x-icon" href="calculator.png">
-  <title> Calculator Project </title>
+  <title> Convertor Project </title>
 </head>
 
 <body>
-    
+    <div class="grid grid-cols-4 grid-rows-5 text-6xl border-2 border-solid border-black">
+        <input type="text" id="input" oninput="converter(this.value)">
+        <p> Celsius: <span id="output"></span> </p> 
+    </div>
 </body>
+
+<script>
+
+//let x = document.getElementById("input")
+
+function converter(x) {
+    document.getElementById("output").innerHTML = (x - 32) / 1.8 
+    }
+;
+
+
+
+</script>
+
 
 </html>
